@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>fint-event-model-csharp</id>
+    <version>1.0.0-rc1</version>
+    <title>fint-event-model-csharp</title>
+    <authors>mto</authors>
+    <owners>mto</owners>
+    <projectUrl>http://github.com/fintprosjektet</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FintEventModel</description>
+    <releaseNotes>Initial model.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>fint model</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\FintEventModel.dll" target="lib\netstandard1.3\FintEventModel.dll" />
+  </files>
+</package>
