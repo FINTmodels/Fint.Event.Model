@@ -3,7 +3,8 @@
   "dependencies": {
     "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "NETStandard.Library": "1.6.0",
-    "Newtonsoft.Json": "10.0.2"
+    "Newtonsoft.Json": "10.0.2",
+    "NuGet.Build.Packaging": "0.1.248"
   },
   "frameworks": {
     "netstandard1.4": {}

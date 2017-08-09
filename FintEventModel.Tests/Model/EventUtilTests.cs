@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FintEventModel.Model;
 
@@ -11,7 +10,7 @@ namespace FintEventModel.Tests
         [TestMethod]
         public void ConvertEventToJson()
         {
-            var evt = new Event("rogfk.no", "fk", "GET_ALL", "myClient");
+            var evt = new Event<string>("rogfk.no", "fk", "GET_ALL", "myClient");
 
             string json = EventUtil.ToJson(evt);
 
@@ -29,7 +28,7 @@ namespace FintEventModel.Tests
                 "\"source\": \"employee\",  \"client\": \"vfs\",  \"message\": null" +
                 "}";
 
-            var evt = EventUtil.ToEvent(json);
+            var evt = EventUtil.ToEvent<string>(json);
 
             Assert.IsTrue(evt != null);
             Assert.IsTrue(evt.Action == "GET_ALL_EMPLOYEES");

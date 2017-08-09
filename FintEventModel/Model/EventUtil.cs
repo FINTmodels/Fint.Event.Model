@@ -6,11 +6,11 @@ namespace FintEventModel.Model
 {
     public class EventUtil
     {
-        public static Event ToEvent(string json)
+        public static Event<T> ToEvent<T>(string json)
         {
             try
             {
-                return JsonConvert.DeserializeObject<Event>(json);
+                return JsonConvert.DeserializeObject<Event<T>>(json);
             }
             catch
             {
@@ -18,12 +18,7 @@ namespace FintEventModel.Model
             }
         }
 
-        public static IEnumerable<string> ConvertEventData(Event evt)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static string ToJson(Event evt)
+        public static string ToJson<T>(Event<T> evt)
         {
             try
             {

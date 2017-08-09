@@ -47,7 +47,7 @@
         /// Indicates that we never to a confirmation from the provider after delivering it according
         /// to the TTL value.
         /// </summary>
-        PROVIDER_NOT_CONFIRMED = 14,
+        PROVIDER_NOT_CONFIRMED = 103,
 
         /// <summary>
         /// Indicates that the event could not be delivered to the provider.
@@ -90,7 +90,7 @@
         /// <summary>
         /// Indicates that the event is delivered to the cache service.
         /// </summary>
-        CACHE = 59,
+        CACHE = 50,
         /// <summary>
         /// Indicates that the event is the response form the cache service.
         /// </summary>
