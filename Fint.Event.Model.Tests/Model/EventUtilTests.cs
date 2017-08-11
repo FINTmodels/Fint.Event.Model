@@ -1,8 +1,8 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FintEventModel.Model;
+using Fint.Event.Model;
 
-namespace FintEventModel.Tests
+namespace Fint.Event.Model.Tests
 {
     [TestClass]
     public class EventUtilTests

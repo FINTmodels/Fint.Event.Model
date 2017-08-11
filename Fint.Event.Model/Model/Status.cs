@@ -1,4 +1,4 @@
-﻿namespace FintEventModel.Model
+﻿namespace Fint.Event.Model
 {
     /// <summary>
     /// The Status Enum indicates what step the { @link Event } is at.The steps can be:

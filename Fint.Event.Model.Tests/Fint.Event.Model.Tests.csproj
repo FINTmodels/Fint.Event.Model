@@ -1,8 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>    
-    <TargetFramework>netcoreapp1.1</TargetFramework>
-    <ReleaseVersion>1.0.1</ReleaseVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Version>1.0.2</Version>
+    <Authors>FINT</Authors>
+    <PackageTags>fint</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FintEventModel\FintEventModel.csproj" />
+    <ProjectReference Include="..\Fint.Event.Model\Fint.Event.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

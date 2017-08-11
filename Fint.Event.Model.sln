@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FintEventModel", "FintEventModel\FintEventModel.csproj", "{63FA5D4E-A3FC-4B2F-8DCF-C8F54D406210}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fint.Event.Model", "Fint.Event.Model\Fint.Event.Model.csproj", "{63FA5D4E-A3FC-4B2F-8DCF-C8F54D406210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FintEventModel.Tests", "FintEventModel.Tests\FintEventModel.Tests.csproj", "{9530FAFE-4F4E-4666-8179-DE5B5BC629F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fint.Event.Model.Tests", "Fint.Event.Model.Tests\Fint.Event.Model.Tests.csproj", "{9530FAFE-4F4E-4666-8179-DE5B5BC629F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,5 +27,9 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		version = 1.0.1
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
 	EndGlobalSection
 EndGlobal

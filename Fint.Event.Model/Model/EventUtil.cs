@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace FintEventModel.Model
+namespace Fint.Event.Model
 {
     public class EventUtil
     {

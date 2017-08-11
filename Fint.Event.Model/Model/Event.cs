@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FintEventModel.Model
+namespace Fint.Event.Model
 {
     /// <summary>
     ///  An Event object is created at the consumer interface and sent back to either the cache or the provider. After the
