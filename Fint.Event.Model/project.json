@@ -7,6 +7,6 @@
     "NuGet.Build.Packaging": "0.1.248"
   },
   "frameworks": {
-    "netstandard1.4": {}
+    "netstandard2.0": {}
   }
 }

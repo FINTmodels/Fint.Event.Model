@@ -8,17 +8,17 @@
     <ProjectGuid>{63FA5D4E-A3FC-4B2F-8DCF-C8F54D406210}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Fint.Event</RootNamespace>
-    <AssemblyName>FintEventModel</AssemblyName>
+    <AssemblyName>Fint.Event.Model</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-    <ReleaseVersion>1.0.3</ReleaseVersion>
+    <ReleaseVersion>1.0.4</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>FINT.Event.Model</PackageId>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <Authors>FINTProsjektet</Authors>
     <Description>Event model for FINT</Description>
     <SynchReleaseVersion>false</SynchReleaseVersion>
@@ -54,8 +54,6 @@
     <Compile Include="Model\Health\Health.cs" />
     <Compile Include="Model\Health\HealthStatus.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Health\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
