@@ -1,59 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63FA5D4E-A3FC-4B2F-8DCF-C8F54D406210}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Fint.Event</RootNamespace>
-    <AssemblyName>Fint.Event.Model</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
-    <FileAlignment>512</FileAlignment>
-    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
-    <ReleaseVersion>1.0.4</ReleaseVersion>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ReleaseVersion>1.0.3</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
-    <PackageId>FINT.Event.Model</PackageId>
-    <PackageVersion>1.0.4</PackageVersion>
+    <PackageId>FINT.Relation.Model</PackageId>
+    <PackageVersion>1.0.3</PackageVersion>
     <Authors>FINTProsjektet</Authors>
     <Description>Event model for FINT</Description>
-    <SynchReleaseVersion>false</SynchReleaseVersion>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <SynchReleaseVersion>true</SynchReleaseVersion>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="project.json" />
-    <!-- A reference to the entire .NET Framework is automatically included -->
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Model\Event.cs" />
-    <Compile Include="Model\EventUtil.cs" />
-    <Compile Include="Model\Status.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\DefaultActions.cs" />
-    <Compile Include="Model\HeaderConstants.cs" />
-    <Compile Include="Model\Health\Health.cs" />
-    <Compile Include="Model\Health\HealthStatus.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
