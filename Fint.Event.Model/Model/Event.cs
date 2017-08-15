@@ -86,6 +86,16 @@ namespace Fint.Event.Model
         {
         }
 
+        public bool IsHealthCheck()
+        {
+            return DefaultActions.HEALTH.ToString().Equals(Action);
+        }
+
+        public bool IsRegisterOrgId()
+        {
+            return DefaultActions.REGISTER_ORG_ID.ToString().Equals(Action);
+        }
+
         public override string ToString()
         {
             return "Event{" +

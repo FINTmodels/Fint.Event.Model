@@ -1,25 +1,23 @@
 using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Fint.Event.Model;
+using Xunit;
 
-namespace Fint.Event.Model.Tests
+namespace Fint.Event.Model.Tests.Model
 {
-    [TestClass]
     public class EventUtilTests
     {
-        [TestMethod]
+        [Fact]
         public void ConvertEventToJson()
         {
             var evt = new Event<string>("rogfk.no", "fk", "GET_ALL", "myClient");
 
             string json = EventUtil.ToJson(evt);
 
-            Assert.IsTrue(json.StartsWith("{"));
-            Assert.IsTrue(json.EndsWith("}"));
-            Assert.IsTrue(json.Contains("rogfk.no"));
+            Assert.True(json.StartsWith("{"));
+            Assert.True(json.EndsWith("}"));
+            Assert.True(json.Contains("rogfk.no"));
         }
 
-        [TestMethod]
+        [Fact]
         public void ConvertJsonToEvent()
         {
             String json = "{\"corrId\": \"9b71b7ab-c06d-400a-bca3-f06659006000\",  \"action\":" +
@@ -30,8 +28,8 @@ namespace Fint.Event.Model.Tests
 
             var evt = EventUtil.ToEvent<string>(json);
 
-            Assert.IsTrue(evt != null);
-            Assert.IsTrue(evt.Action == "GET_ALL_EMPLOYEES");
+            Assert.True(evt != null);
+            Assert.True(evt.Action == "GET_ALL_EMPLOYEES");
 
         }
     }
