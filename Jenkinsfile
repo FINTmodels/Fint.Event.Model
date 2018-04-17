@@ -9,7 +9,10 @@ pipeline {
     stage('Build') {
       steps {
         sh 'git clean -fdx'
-        sh 'dotnet msbuild Fint.Event.Model.sln'
+        sh 'dotnet msbuild /t:restore Fint.Event.Model.sln'
+        sh 'dotnet msbuild /t:build /p:Configuration=Release Fint.Event.Model.sln'
+        sh 'dotnet msbuild /t:pack /p:Configuration=Release Fint.Event.Model.sln'
+        sh 'dotnet test Fint.Event.Model.Tests'
         stash includes: "**/Release/*.nupkg", name: 'libs'
       }
     }
