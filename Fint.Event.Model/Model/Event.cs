@@ -61,6 +61,10 @@ namespace Fint.Event.Model
         /// 
         public List<T> Data { get; set; }
 
+        public string StatusCode { get; set; }
+
+        public List<Problem> Problems { get; set; }
+
         /// <summary>
         /// Default constructor that create an empty Event object.
         /// </summary>
