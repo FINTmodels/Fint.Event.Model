@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Fint.Event.Model
+﻿namespace Fint.Event.Model
 {
     public class Problem
     {
