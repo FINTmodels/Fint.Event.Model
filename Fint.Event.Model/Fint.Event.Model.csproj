@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <ReleaseVersion>2.0.0</ReleaseVersion>
+    <ReleaseVersion>3.0.0-rc-1</ReleaseVersion>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>FINT.Event.Model</PackageId>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>3.0.0-rc-1</PackageVersion>
     <Authors>FINTProsjektet</Authors>
     <Description>Event model for FINT</Description>
     <SynchReleaseVersion>true</SynchReleaseVersion>
