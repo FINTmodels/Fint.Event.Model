@@ -34,5 +34,44 @@ namespace Fint.Event.Model.Tests.Model
             Assert.True(evt.ResponseStatus == ResponseStatus.ACCEPTED);
 
         }
+
+        [Fact]
+        public void ConvertFullJsonToEvent()
+        {
+            String json = "{\n" +
+                "  \"corrId\": \"a91cdb9b-0292-4baf-9a27-578642634129\",\n" +
+                "  \"action\": \"GET_ALL\",\n" +
+                "  \"status\": \"NEW\",\n" +
+                "  \"time\": 1524131147134,\n" +
+                "  \"orgId\": \"rogfk.no\",\n" +
+                "  \"source\": \"fk\",\n" +
+                "  \"client\": \"myClient\",\n" +
+                "  \"data\": [],\n" +
+                "  \"message\": \"There is a disturbance in the Force\",\n" +
+                "  \"query\": \"what\",\n" +
+                "  \"problems\": [\n" +
+                "    {\n" +
+                "      \"field\": \"monkey\",\n" +
+                "      \"message\": \"Only chimpanzees allowed\",\n" +
+                "      \"code\": \"9999\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"field\": \"jedi\",\n" +
+                "      \"message\": \"Luke not found\",\n" +
+                "      \"code\": \"44\"\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"statusCode\": \"JEDI-XX\",\n" +
+                "  \"responseStatus\": \"ERROR\"\n" +
+                "}";
+
+            var evt = EventUtil.ToEvent<string>(json);
+
+            Assert.NotNull(evt);
+            Assert.Equal(ResponseStatus.ERROR, evt.ResponseStatus);
+            Assert.Equal("JEDI-XX", evt.StatusCode);
+            Assert.Equal(2, evt.Problems.Count);
+            Assert.Equal("9999", evt.Problems[0].Code);
+        }
     }
 }
