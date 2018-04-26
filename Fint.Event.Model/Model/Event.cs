@@ -61,6 +61,8 @@ namespace Fint.Event.Model
         /// 
         public List<T> Data { get; set; }
 
+        public ResponseStatus ResponseStatus { get; set; }
+
         public string StatusCode { get; set; }
 
         public List<Problem> Problems { get; set; }
