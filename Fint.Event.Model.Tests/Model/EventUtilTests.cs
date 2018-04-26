@@ -68,7 +68,7 @@ namespace Fint.Event.Model.Tests.Model
             var evt = EventUtil.ToEvent<string>(json);
 
             Assert.NotNull(evt);
-            //Assert.Equal(ResponseStatus.ERROR, evt.ResponseStatus);
+            Assert.Equal(ResponseStatus.ERROR, evt.ResponseStatus);
             Assert.Equal("JEDI-XX", evt.StatusCode);
             Assert.Equal(2, evt.Problems.Count);
             Assert.Equal("9999", evt.Problems[0].Code);
