@@ -19,6 +19,12 @@ namespace Fint.Event.Model
         /// For example it could be<code> GET_ALL_EMPLOYEES</code>
         /// </summary>
         public string Action { get; set; }
+
+        /// <summary>
+        /// The operation to be performed on the data.
+        /// </summary>
+        public Operation? Operation { get; set; }
+
         /// <summary>
         /// Status of the event. See {@link Status} for more informasjon.
         /// </summary>
@@ -61,7 +67,7 @@ namespace Fint.Event.Model
         /// 
         public List<T> Data { get; set; }
 
-        public ResponseStatus ResponseStatus { get; set; }
+        public ResponseStatus? ResponseStatus { get; set; }
 
         public string StatusCode { get; set; }
 

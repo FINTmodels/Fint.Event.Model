@@ -1,5 +1,7 @@
 using System;
 using Xunit;
+using Newtonsoft.Json;
+
 
 namespace Fint.Event.Model.Tests.Model
 {
@@ -72,6 +74,17 @@ namespace Fint.Event.Model.Tests.Model
             Assert.Equal("JEDI-XX", evt.StatusCode);
             Assert.Equal(2, evt.Problems.Count);
             Assert.Equal("9999", evt.Problems[0].Code);
+        }
+
+        [Fact]
+        public void ConvertSimensJsonToEvent()
+        {
+            String json = "{\"corrId\":\"695795ef-3943-4fb9-b5ab-395cbaa43d63\",\"action\":\"GET_ALL_PERSONALRESSURS\",\"operation\":null,\"status\":\"DOWNSTREAM_QUEUE\",\"time\":1525762171305,\"orgId\":\"afk.no\",\"source\":\"personal\",\"client\":\"CACHE_SERVICE\",\"data\":[],\"statusCode\":null,\"responseStatus\":null,\"problems\":null,\"message\":null,\"query\":null}";
+            //var evt = EventUtil.ToEvent<string>(json);
+            var evt = JsonConvert.DeserializeObject<Event<string>>(json);
+
+            Assert.NotNull(evt);
+            Assert.Equal(Status.DOWNSTREAM_QUEUE, evt.Status);
         }
     }
 }
