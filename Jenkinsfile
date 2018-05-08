@@ -27,6 +27,7 @@ pipeline {
         deleteDir()
         unstash 'libs'
         archiveArtifacts '**/*.nupkg'
+        sh "dotnet nuget push Fint.Event.Model/bin/Release/Fint.Event.Model.*.nupkg -k ${BINTRAY} -s https://api.bintray.com/nuget/fint/nuget"
       }
     }
   }
