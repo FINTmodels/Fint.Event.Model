@@ -1,26 +1,33 @@
 namespace Fint.Event.Model
 {
+    /// <summary>
+    /// Operation to be performed using provided data.
+    /// </summary>
     public enum Operation
     {
-        /**
-         * Request data validation.  No information is stored or modified.
-         */
+        /// <summary>
+        /// Request data validation.  No information is stored or modified.
+        /// </summary>
         VALIDATE,
-        /**
-         * Request data creation.  A new information entity is to be created.
-         */
+
+        /// <summary>
+        /// Request data creation.  A new information entity is to be created.
+        /// </summary>
         CREATE,
-        /**
-         * Request data.  Return existing information entity.
-         */
+
+        /// <summary>
+        /// Request data.  Return existing information entity.
+        /// </summary>
         READ,
-        /**
-         * Request data modification.  An existing information entity is to be modified.
-         */
+
+        /// <summary>
+        /// Request data modification.  An existing information entity is to be modified.
+        /// </summary>
         UPDATE,
-        /**
-         * Request data deletion.  An existing information entity is to be removed.
-         */
+
+        /// <summary>
+        /// Request data deletion.  An existing information entity is to be removed.
+        /// </summary>
         DELETE
 
     }
