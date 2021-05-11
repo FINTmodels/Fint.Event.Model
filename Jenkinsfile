@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Deploy') {
       environment {
-        BINTRAY = credentials('fint-bintray')
+        NUGET_KEY = credentials('fint-nuget')
       }
       when {
         branch 'master'
@@ -27,7 +27,7 @@ pipeline {
         deleteDir()
         unstash 'libs'
         archiveArtifacts '**/*.nupkg'
-        sh "dotnet nuget push Fint.Event.Model/bin/Release/Fint.Event.Model.*.nupkg -k ${BINTRAY} -s https://api.bintray.com/nuget/fint/nuget"
+        sh "dotnet nuget push Fint.Event.Model/bin/Release/Fint.Event.Model.*.nupkg -k ${NUGET_KEY} -s https://api.nuget.org/v3/index.json"
       }
     }
   }
