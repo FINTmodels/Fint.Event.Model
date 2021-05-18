@@ -5,7 +5,8 @@
     <PackOnBuild>true</PackOnBuild>
     <PackageId>FINT.Event.Model</PackageId>
     <PackageVersion>3.0.0</PackageVersion>
-    <Authors>FINTProsjektet</Authors>
+    <Company>Vigo IKS</Company>
+    <Authors>FINTLabs</Authors>
     <Description>Event model for FINT</Description>
     <SynchReleaseVersion>true</SynchReleaseVersion>
   </PropertyGroup>
