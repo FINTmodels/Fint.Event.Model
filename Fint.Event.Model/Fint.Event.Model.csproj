@@ -12,6 +12,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <PackageReference Include="Nuget.CommandLine" Version="4.3.0" />
+    <PackageReference Include="Nuget.CommandLine" Version="4.9.5" />
   </ItemGroup>
 </Project>
